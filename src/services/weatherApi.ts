@@ -19,9 +19,7 @@ export async function fetchWeather(city: string): Promise<WeatherData> {
   };
 
   const key = cleanCity.toLowerCase();
-  if (mockData[key]) {
-    return mockData[key];
-  }
+  if (mockData[key]) return mockData[key];
 
   return {
     city: cleanCity.charAt(0).toUpperCase() + cleanCity.slice(1),
